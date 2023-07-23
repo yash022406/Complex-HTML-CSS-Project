@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dist/apexcharts.css">
+    <script src="https://kit.fontawesome.com/edce2ef283.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts">
+        var options = {
+  chart: {
+    type: 'line'
+  },
+  series: [{
+    name: 'sales',
+    data: [30,40,35,50,49,60,70,91,125]
+  }],
+  xaxis: {
+    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+  }
+}
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+    </script>
+    <title>Retirement</title>
+</head>
+<body>
+    <div class="grey-background">
+    <div class="main-body">
+        <div class="navbar">
+            
+                <div class="top-icons">
+                <i class="fa-sharp fa-solid fa-dove fa-xl dove-icon hide" style="color: #4935fd;"></i>
+                <i class="fa-solid fa-magnifying-glass icon"  style="color: #ababab;"></i>
+                </div>
+                <div class="middle-icons">
+                    <i class="fa-solid fa-house icon"  style="color: #ababab;"></i>
+                    <i class="fa-solid fa-newspaper icon"  style="color: #ababab;"></i>
+                    <i class="fa-solid fa-table-list icon" style="color: #ababab;"></i>
+                    <i class="fa-regular fa-user icon" style="color: #ababab;"></i>
+                </div>
+                <div class="buttom-icons">
+                    <i class="fa-regular fa-bell notification-icon" style="color: #ababab;"></i>
+                    <i class="fa-solid fa-arrow-right-from-bracket exit" style="color: #ababab;"></i>
+                </div>
+            
+        </div>
+        <div class="notification"><i class="fa-regular fa-bell fa-xl notification-icon" style="color: #ababab;"></i><div class="ball"></div></div>
+
+        <div class="second-coloumn">
+            <div class="about">
+                <div class="image">
+                    <img src="https://www.hakuhodo-global.com/wp_admin/wp-content/uploads/2017/11/Kazuhiro_Suda2square.jpg">
+                </div>
+                <div class="text">
+                <b>Hi Mike,</b>
+                <p>Welcome back.</p>
+                </div>
+            </div>
+            <div class="account-details">
+                <b class="today">Today</b>
+                <div class="account-balance">
+                    <h2>$19,892</h2>
+                    <p class="grey">Account Balance</p>
+                </div>
+                <div class="same-level">
+                <div class="contributions">
+                    <h4>$4,000</h4>
+                    <p class="grey">Year-to-Date</p>
+                </div>
+                <div class="total-intrest">
+                    <h4>$1,892</h4>
+                    <p class="grey">Total Intrest</p>
+                </div>
+                </div>
+                <div class="button">
+                    <button>I want to <i class="fa-solid fa-caret-down"></i></button>
+                </div>
+
+            </div>
+            <div class="recent-transactions">
+                <b class="head">Recent Transactions</b>
+                <div class="transaction">
+                    <p class="date grey">2020-08-07</p>
+                    <p class="transactionID">Withdrawl Transfer to Bank-XXX11 </p>
+                </div>
+                <div class="transaction">
+                    <p class="date grey">2020-07-21</p>
+                    <p class="transactionID">Withdrawl Transfer to Bank-XXX11 </p>
+                </div>
+                <div class="transaction">
+                    <p class="date grey">2020-07-16</p>
+                    <p class="transactionID">Withdrawl Transfer to Bank-XXX11 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="income-details">
+            <div class="headings">
+                <h4>Retirement Income</h4>
+                <p>Starting Year 2056</p>
+            </div>
+            <div class="goals">
+                <div class="my-goal blocks block1">
+                    <p class="number">$300,000</p>
+                    <p class="grey">My Goal</p>
+                </div>
+                <div class="goal-achieved blocks">
+                    <p class="number">59%</p>
+                    <p class="grey">Goal Achieved</p>
+                </div>
+                <div class="estimate blocks">
+                    <p class="number">$300</p>
+                    <p class="grey">Est. Monthly Income</p>
+                </div>
+            </div>
+            <div class="contribution-graph" >
+                <p>Contributions Overtime</p>
+                <div class="labels">
+                    <div class="label">
+                        <div class="color dark-purple"></div>
+                        <div class="info">Employer: K 73,500</div>
+                    </div>
+                    <div class="label">
+                        <div class="color purple"></div>
+                        <div class="info">Employee: K 52,500</div>
+                    </div>
+                    <div class="label">
+                        <div class="color light-purple"></div>
+                        <div class="info">Total Intrest: K 244,313</div>
+                    </div>
+                </div>
+                <div class="graph" id="chart"></div>
+
+            </div>
+            <div class="comaprision">
+                <b>How do I compare with my peers?</b>
+                <p class="greyText">These numbers represent current goal achieved.</p>
+                <div class="circles">
+                    <div class="sortVia sort1">
+                        <div class="age sort">
+                            <p><b>Age: </b> Under 30 <i class="fa-solid fa-caret-down" style="color: #424242;"></i></p>
+                        </div>
+                        <div class="salary sort">
+                            <p><b>Salary: </b> K 20 - K 30 <i class="fa-solid fa-caret-down" style="color: #424242;"></i></p>
+                        </div>
+                        <div class="gender sort">
+                            <p><b>Gender: </b> Male <i class="fa-solid fa-caret-down" style="color: #424242;"></i></p>
+                        </div>
+                    </div>
+                    <div class="average">
+                        <div class="circular-progress">
+
+                            <span class="percentage">
+                                0%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="circular-progress-top">
+
+                            <span class="percentage-top">
+                                0%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="me">
+                        <div class="circular-progress-me">
+
+                            <span class="percentage-me">
+                                0%
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="retirement-strategy">
+            <div class="greyBox">
+                <b>Retirement Strategy</b>
+                <div class="sliders">
+                    <div class="employee-contribution">
+                        <p class="name">Employee Contribution</p>
+                        <div class="sliderPercent">
+                            <input type="range" class="slider" min="0" max="25" id="myrange">
+                            <div id="outputValue">13%</div>
+                        </div>
+                    </div>
+                    <div class="retirement-age">
+                        <p class="name">Retirement Age</p>
+                        <div class="sliderPercent">
+                            <input type="range" class="slider" min="0" max="90" id="myage">
+                            <div id="age">50</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="employer">
+                    <div class="employer-contribution">
+                        <p>Employer Contribution</p>
+                        <p>8.4%</p>
+                    </div>
+                    <div class="intrest-rate">
+                        <p>Intrest Rate</p>
+                        <p>5%</p>
+                    </div>
+                </div>
+                <div class="update">
+                    <button>Update</button>
+                </div>
+                <button class="docs">View Help Docs ></button>
+            </div>
+            <div class="add">
+                <p>Are you considering a</p>
+                <b>House Advance?</b>
+                <p class="grey">Limited time Reduced Intrest</p>
+                <buttom class="learn">Learn More ></buttom>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="dist/apexcharts.min.js"></script>
+<script>
+    var chart = document.getElementById('#chart')
+    var options = {
+          series: [{
+          name: 'Employer: K 73,500',
+          data: [20, 22, 25, 27, 29, 33, 35, 40 , 50, 60, 65, 75, 85]
+        }, {
+          name: 'Employee: K 52,500',
+          data: [20, 25,28,25,40,50,55,60,70,75,80,90,95]
+        }, {
+          name: 'Total Intrest: K 244,313',
+          data: [25,30,33,35,40,45,50,60,70,75,85,95,105]
+        }],
+          chart: {
+          type: 'bar',
+          height: 220,
+          stacked: true,
+          toolbar: {
+            show: true
+          },
+          zoom: {
+            enabled: true
+          },
+          dataLabels: {
+            enabled: false
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }],
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            borderRadius: 1,
+            dataLabels: {
+                
+              enabled: false
+            }
+          },
+          
+        },
+        xaxis: {
+          type: 'number',
+          categories: [ 20,25,30,35,40,45,50,55,60,65,70,75,80
+          ],
+          labels: {
+            formatter: function (value) {
+            return value;
+               }
+            }
+        },
+        yaxis: {
+            labels: {
+                formatter: function (value) {
+                return   "$" + value;
+                }
+            },
+        },
+        legend: {
+          show: false
+        },
+        
+        fill: {
+          opacity: 1,
+          colors: ['#07009C', '#4636F5', '#8EAEF9']
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+</script>
+<script>
+    const rangeSlider = document.getElementById("myrange");
+    const output = document.getElementById("outputValue");
+
+    const ageSlider = document.getElementById("myage");
+    const age = document.getElementById("age");
+
+    // Set initial output value
+    output.innerHTML = rangeSlider.value + '%';
+    age.innerHTML = ageSlider.value;
+
+    // Update the output value when the range slider changes
+    rangeSlider.addEventListener("input", function() {
+    output.innerHTML = this.value + '%';
+})
+ageSlider.addEventListener("input", function() {
+    age.innerHTML = this.value;
+});
+</script>
+<script src="./Circles/Circles.js"></script>
+<script src="./Circles/circles-top.js"></script>
+<script src="./Circles/circles-me.js"></script>
+</html>
